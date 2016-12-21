@@ -86,21 +86,30 @@
       font-size: 200px;
   }
 
+  .thumbnail-row {
+    display: flex;
+  }
+
+  .thumbnail-container {
+    flex: 1;
+    padding: 15px;
+  }
+
   .thumbnail {
       display: block;
       padding: 10px 10px 15px 10px;
       border-radius: 0;
       border: none;
       transition: box-shadow 0.5s;
-      min-height: 350px;
+      height: 100%;
+
   }
 
-   .thumbnail:hover {
+  .thumbnail:hover {
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .thumbnail img {
       width: 70%;
-      height: 100%;
       padding: 10px;
       margin-bottom: 10px;
   }
@@ -160,6 +169,9 @@
       -webkit-transform: translateY(0%);
     }
   }
+
+
+
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -169,12 +181,21 @@
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .thumbnail-row {
+      display: block;
+    }
+
   }
+  
+
   @media screen and (max-width: 480px) {
     .logo {
         font-size: 150px;
     }
+    
   }
+
 
 </style>
 
@@ -217,29 +238,30 @@
 
 <div id="aboutme" class="container-fluid text-center bg-grey">
   <h2>about me</h2><br>
-  <div id ="container-about" class="row text-center slideanim">
-    <div id ="malaysia" class="col-sm-3">
+  <div id ="container-about" class="thumbnail-row text-center slideanim">
+    <div id ="malaysia" class="thumbnail-container">
+
       <div class="thumbnail">
         <img src="images/countries/malaysia.png" alt="Malaysia" width="400" height="300">
         <p><strong>Malaysia</strong></p>
         <p align="left">Born and raised. Grew up eating nasi lemak and roti canai which may or may not have contributed to my size.</p>
       </div>
     </div>
-    <div id = "singapore" class="col-sm-3">
+    <div id = "singapore" class="thumbnail-container">
       <div class="thumbnail">
         <img src="images/countries/singapore.png" alt="Singapore" width="400" height="300">
         <p><strong>Singapore</strong></p>
         <p align="left">Studied here for 5 years. I bleed Hainanese Chicken Rice. And talk about public transport efficiency and cleanest place ever.</p>
       </div>
     </div>
-    <div id = "japan" class="col-sm-3">
+    <div id = "japan" class="thumbnail-container">
       <div class="thumbnail">
         <img src="images/countries/japan.png" alt="Osaka" width="400" height="300">
         <p><strong>Osaka</strong></p>
         <p align="left">Did an exchange here prior to entering tertiary education. Did I tell you about the sashimi? It's amazing.</p>
       </div>
     </div>
-   	<div id ="usa" class="col-sm-3">
+   	<div id ="usa" class="thumbnail-container">
       <div class="thumbnail">
         <img src="images/countries/usa.png" alt="Los Angeles" width="400" height="300">
         <p><strong>Los Angeles</strong></p>
